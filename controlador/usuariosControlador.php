@@ -11,6 +11,11 @@ class usuariosControlador{
         $obj = new usuariosDatos();
 		return $obj->validar($usuario,$pass);
       }
+      
+       function validarsql($usuario,$pass){
+        $obj = new usuariosDatos();
+		return $obj->validarsql($usuario,$pass);
+      }
 }
 
 ?>

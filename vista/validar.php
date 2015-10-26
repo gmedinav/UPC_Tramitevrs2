@@ -7,7 +7,7 @@ if(isset($_POST["usuario"]) || isset($_POST["pass"])){
         echo "false";
     }else{
         $usuariosCon = new usuariosControlador();
-        if($usuariosCon->validar($_POST["usuario"],$_POST["pass"])){
+        if($usuariosCon->validarsql($_POST["usuario"],$_POST["pass"])){
             session_start();
             $_SESSION["usuario"] = $_POST["usuario"];
             $_SESSION["pass"] = $_POST["pass"];
